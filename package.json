@@ -8,13 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "yes"
+    "url": "https://github.com/ayushk16/personalBlogSite.git"
   },
   "author": "ayush",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
   }
 }

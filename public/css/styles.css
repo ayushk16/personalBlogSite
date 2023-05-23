@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: gilroy;
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.nav-link{
+    margin:2px;
+}
+.nav-link a{
+    text-decoration: none;
+    color: grey;
+}
+.navbar{
+    height: 5%;
+    width: 100%;
+    /* background-color: #F2BED1; */
+    /* background-color: #FDCEDF; */
+    background-color: #F8E8EE;
+
+}
+.navbar-brand{
+    position: relative;
+    top:10px;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.footer-padding{
+    padding-bottom: 60px;
+}
+.footer{
+    /* position: relative;
+    bottom: 0; */
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    background-color: #F9F5F6;
+}
+.footer p {
+    /* margin-top: 2%; */
+}
