@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const ejs = require("ejs");
+const _ = require("lodash");
 const app = express();
 
 
@@ -18,7 +19,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 app.get("/about",function(req,res){
-    res.render(__dirname+"/views/about.ejs",{aboutCont : aboutContent,cont});
+    res.render(__dirname+"/views/about.ejs",{aboutCont : aboutContent});
 })
 
 app.get("/contact",function(req,res){
@@ -38,20 +39,14 @@ app.get("/compose",function(req,res){
     res.render(__dirname+"/views/compose.ejs");
 })
 
+
 app.get("/post/:lnkval",function(req,res){
-    console.log(req.params.lnkval);
-    let flag = false;
+    const flag =_.lowerCase(req.params.lnkval);
     arraypost.forEach(function(pos){
-        if(pos.title===req.params.lnkval){
-            flag = true;
+        if(_.lowerCase(pos.title)===flag){
+            res.render(__dirname+"/views/post.ejs",{cont:pos});
         }
     })
-    if(flag){
-        console.log("match found");
-    }
-    else{
-        console.log("match not found");
-    }
 })
 
 
